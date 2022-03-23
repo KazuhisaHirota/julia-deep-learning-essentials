@@ -15,3 +15,17 @@ function makeDataset(startIndex::Int, endIndex::Int, mu1::Float64, mu2::Float64,
         T[i, :] = answer
     end
 end
+
+function makeXORDataset()
+    X = [0. 0.;
+         0. 1.;
+         1. 0.;
+         1. 1.]
+    
+    T = [0  1;
+         1  0;
+         1  0;
+         0  1]
+
+    return X, T
+end
